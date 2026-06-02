@@ -6,7 +6,6 @@ WORKDIR /microservice-project
 
 FROM chef AS planner
 COPY . .
-RUN cargo chef prepare --recipe-path recipe.json
 
 FROM chef AS builder
 COPY --from=planner /microservice-project/recipe.json recipe.json
