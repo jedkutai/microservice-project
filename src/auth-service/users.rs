@@ -13,6 +13,7 @@ pub trait Users {
     fn delete_user(&mut self, user_uuid: String);
 }
 
+
 #[derive(Clone)]
 pub struct User {
     user_uuid: String,
